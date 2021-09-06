@@ -16,7 +16,12 @@ library(datasauRus)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+The datasaurus_dozen file has 1846 rows and 3 columns. The three variables are `dataset`, `x`, and `y`.
+```{r}
+datasaurus_dozen %>%
+  count(dataset) %>%
+  print(13)
+```
 
 ### Exercise 2
 
