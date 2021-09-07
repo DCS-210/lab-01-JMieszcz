@@ -1,9 +1,3 @@
----
-output:
-  html_document: 
-    highlight: haddock
-    theme: readable
----
 Lab 01 - Hello R
 ================
 John Mieszczanski
@@ -183,4 +177,6 @@ datasaurus_dozen %>%
 
 As we can see, `v_lines` has the largest magnitude of (negative)
 correlation and `dots` has the smallest magnitude of (negative)
-correlation.
+correlation. However, these magnitudes are so small that effectively
+none of the datasets have any meaninful linear correlation between `x`
+and `y`.

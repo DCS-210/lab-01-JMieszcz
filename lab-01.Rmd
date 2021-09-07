@@ -104,4 +104,4 @@ datasaurus_dozen %>%
   summarize(r = cor(x, y))
 ```
 
-As we can see, `v_lines` has the largest magnitude of (negative) correlation and `dots` has the smallest magnitude of (negative) correlation.
+As we can see, `v_lines` has the largest magnitude of (negative) correlation and `dots` has the smallest magnitude of (negative) correlation. However, these magnitudes are so small that effectively none of the datasets have any meaninful linear correlation between `x` and `y`.
