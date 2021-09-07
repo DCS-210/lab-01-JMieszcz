@@ -3,10 +3,6 @@ output:
   html_document: 
     highlight: haddock
     theme: readable
-  pdf_document: 
-    fig_width: 7
-    fig_height: 5
-    highlight: tango
 ---
 Lab 01 - Hello R
 ================
