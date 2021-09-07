@@ -66,17 +66,24 @@ As we can see, there is essentially no linear relationship between `x` and `y` i
 
 ### Exercise 4
 
-Add code and narrative as needed.
-Note that two R chunks are given but they are not labeled.
-Use the convention from above to name them appropriately.
+Next, let's plot the data in the circle dataset:
 
-```{r}
+```{r plot-circle}
+circle_data <- datasaurus_dozen %>% 
+  filter(dataset == "circle")
 
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-```{r}
+The correlation between `x` and `y` in this dataset is seen below:
 
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
+
+As we can see, there is essentially no linear relationship between `x` and `y` in the `circle_data` dataset! However, there is a slighly larger (negative magnitude) correlation in the `circle_data` dataset compared to the `dino_data` dataset.
 
 ### Exercise 5
 
