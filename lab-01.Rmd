@@ -47,7 +47,7 @@ As we can see, there is essentially no linear relationship between `x` and `y` i
 
 Next, let's plot the data in the star dataset:
 
-```{r plot-star}
+```{r plot-star, fig.height=3, fig.width=6}
 star_data <- datasaurus_dozen %>% 
   filter(dataset == "star")
 
@@ -68,7 +68,7 @@ As we can see, there is essentially no linear relationship between `x` and `y` i
 
 Next, let's plot the data in the circle dataset:
 
-```{r plot-circle}
+```{r plot-circle, fig.height=3, fig.width=6}
 circle_data <- datasaurus_dozen %>% 
   filter(dataset == "circle")
 
@@ -87,5 +87,21 @@ As we can see, there is essentially no linear relationship between `x` and `y` i
 
 ### Exercise 5
 
-Add code and narrative as needed.
-To add R chunks either type out the backticks, curly braces, and the letter `r` or use the Insert chunk button above, green C+.
+Now let's plot all 13 datasets in a 3 column grid using faceting:
+
+```{r all_datasets, fig.height=7, fig.width=10}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
+  geom_point()+
+  facet_wrap(~ dataset, ncol = 3) +
+  theme(legend.position = "none")
+```
+
+Lastly, we will print the correlation coefficients for each of the datasets:
+
+```{r all-cor}
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(r = cor(x, y))
+```
+
+As we can see, `v_lines` has the largest magnitude of (negative) correlation and `dots` has the smallest magnitude of (negative) correlation.
