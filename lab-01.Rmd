@@ -4,7 +4,7 @@ author: "John Mieszczanski"
 date: "09/06/2021"
 output: 
   html_document: 
-    highlight: kate
+    highlight: espresso
     theme: readable
 ---
 
