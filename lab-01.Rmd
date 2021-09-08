@@ -2,7 +2,10 @@
 title: "Lab 01 - Hello R"
 author: "John Mieszczanski"
 date: "09/06/2021"
-output: github_document
+output: 
+  html_document: 
+    highlight: kate
+    theme: readable
 ---
 
 ## Load packages and data
